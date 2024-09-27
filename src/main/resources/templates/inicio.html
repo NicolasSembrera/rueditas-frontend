@@ -13,7 +13,7 @@
 
 <div class="container">
 
-    <form th:action="@{/login/autenticar}" method="post">
+    <form th:action="@{/matricula/buscar}" method="post">
 
         <div class="mt-5 mb-4">
           <center>  <h1>Rueditas</h1> </center>
@@ -22,20 +22,22 @@
         <div class="alert alert-danger" role="alert" th:if="${busquedaModel.codigo != '00'}">
             <span th:text="${busquedaModel.mensaje}"></span>
         </div>
-        <div style="margin-top:100px;" >
+        <div style="paddin:20px;" class="card">
+
+        <div style="margin-top:50px;" >
             <div class="mb-3">
                <h4>Ingrese una placa</h4>
             </div>
 
             <div class="mb-3">
-             <input type="text" id="numeroPlaca" name="numeroPlaca"
+             <input type="text" id="nroMatricula" name="nroMatricula"
                        class="form-control form-control-lg">
             </div>
         </div>
         <div class="d-grid">
             <button type="submit" class="btn btn-primary btn-lg">Buscar</button>
         </div>
-
+        </div>
     </form>
 
 </div>
